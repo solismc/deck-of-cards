@@ -4,10 +4,9 @@ html {
 
 body {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-content: space-around;
-  margin: 0;
+  align-items: center;
   font: 16px / 1 sans-serif;
   background-image: url(/images/cards-table.jpg);
   background-position: top;
@@ -17,10 +16,10 @@ body {
 }
 
 .button {
-  height: 3em;
-  width: 9em;
+  width: 20;
   background-color: red;
   color: black;
   font-size: 32 px;
   padding-top: 5em;
 }
+

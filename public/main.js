@@ -27,8 +27,6 @@ for (let i = 0; i < Deck.length; i++) {
 }
 console.log(Deck)
 
-// if I'm drawing one card here, if I *'s it by 2, does this pull 2 cards?//
-
 const drawOne = () => {
   console.log('Button is clicked')
   const card = Deck.pop()
@@ -37,7 +35,7 @@ const drawOne = () => {
 
 document.querySelector('.pick-a-card-button').addEventListener('click', drawOne)
 
-//duplicated the above line of code and rename const to drawOne and drawTwo//
+
 const draw = () => {
   console.log('Button is clicked')
   const card = Deck.pop()
@@ -47,3 +45,11 @@ const draw = () => {
 }
 
 document.querySelector('.pick-a-card-button').addEventListener('click', draw)
+
+const dealerhand = () => {
+  console.log('button is clicked')
+
+  
+}
+
+document.querySelector('.dealer-hand-hit-me-button').addEventListener('click', dealerhand)
