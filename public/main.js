@@ -16,19 +16,34 @@ for (let i = 0; i < suits.length; i++) {
 }
 console.log(Deck)
 
-const shuffle =[]
-for(let i = 0; i < Deck.length; i++) {
+const shuffle = []
+for (let i = 0; i < Deck.length; i++) {
 
   console.log(Deck[i])
-const j = Math.ceil(Math.random() * i)
-let temp = Deck[i]
-Deck[i] = Deck [j]
-Deck[j] = temp  
+  const j = Math.ceil(Math.random() * i)
+  let temp = Deck[i]
+  Deck[i] = Deck[j]
+  Deck[j] = temp
 }
 console.log(Deck)
 
+// if I'm drawing one card here, if I *'s it by 2, does this pull 2 cards?//
 
-const draw =() => {
+const drawOne = () => {
   console.log('Button is clicked')
-document.querySelector('.output'). textContent = "card"
+  const card = Deck.pop()
+  document.querySelector('.card-one-face-up').textContent = card
 }
+
+document.querySelector('.pick-a-card-button').addEventListener('click', drawOne)
+
+//duplicated the above line of code and rename const to drawOne and drawTwo//
+const draw = () => {
+  console.log('Button is clicked')
+  const card = Deck.pop()
+  document.querySelector('.card-one-face-up').textContent = card
+  const cardTwo = Deck.pop()
+  document.querySelector('.card-two-face-up').textContent = cardTwo
+}
+
+document.querySelector('.pick-a-card-button').addEventListener('click', draw)
