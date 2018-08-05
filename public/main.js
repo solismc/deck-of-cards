@@ -37,7 +37,7 @@ document.querySelector('.pick-a-card-button').addEventListener('click', drawOne)
 
 
 const draw = () => {
-  console.log('Button is clicked')
+  console.log('Shuffle Button is clicked')
   const card = Deck.pop()
   document.querySelector('.card-one-face-up').textContent = card
   const cardTwo = Deck.pop()
@@ -46,10 +46,26 @@ const draw = () => {
 
 document.querySelector('.pick-a-card-button').addEventListener('click', draw)
 
-const dealerhand = () => {
-  console.log('button is clicked')
+const dealerHand = () => {
+  console.log('deal button is clicked')
 
   
 }
 
-document.querySelector('.dealer-hand-hit-me-button').addEventListener('click', dealerhand)
+document.querySelector('.dealer-hand-deal-button').addEventListener('click', dealerHand)
+
+const dealerHitMe = () => {
+  console.log('hit me button is clicked')
+
+  
+}
+
+document.querySelector('.dealer-hand-hit-me-button').addEventListener('click', dealerHitMe)
+
+const dealerStay = () => {
+  console.log('stay button is clicked')
+
+  
+}
+
+document.querySelector('.dealer-hand-stay-button').addEventListener('click', dealerStay)
